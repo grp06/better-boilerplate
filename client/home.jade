@@ -6,10 +6,20 @@ template(name='home')
   .row
     .col-md-12
       .mainInput
-        input.enterTodo(type="text" placeholder="hello")
+        input.enterTodo(type="text" placeholder="enter a todo")
   .row
-    .col-md-12
-      .todosBox
-        each returnAllTodos
-          {{enteredText}}
-          br
+    .col-md-12.mainContent
+      .col-md-6
+        .todosHeading
+          | Todos
+        .todoItems
+          each returnAllTodos
+            .todo {{enteredText}}
+            br
+      .col-md-6
+        .dateHeading
+          | Date
+        .dateItems
+          each returnAllTodos
+            .date {{createdAt}}
+            br
