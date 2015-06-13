@@ -18,5 +18,7 @@ meteorhacks:npm
 twbs:bootstrap
 momentjs:moment
 mquandalle:stylus
+accounts-password
+
 
 npm-container
