@@ -5,7 +5,11 @@ Template.home.helpers counter: ->
 Template.home.events 'keyup': (e) ->
   if e.which == 13
     enteredText = $(".enterTodo").val()
-    date = new Date()
-    Meteor.call 'insertTodo', enteredText, date, (error, response) ->
+    createdAt = moment().format('h:mm:ss a')
+    todosObject = {}
+    todosObject.enteredText = enteredText
+    todosObject.createdAt = createdAt
+    console.log todosObject
+    Meteor.call 'insertTodo', todosObject, (error, response) ->
       console.log error
       console.log response
