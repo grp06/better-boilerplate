@@ -1,7 +1,7 @@
 Todos = new Mongo.Collection('todos')
 
-Template.home.helpers counter: ->
-  Session.get 'counter'
+Template.home.helpers returnAllTodos: ->
+  Todos.find({})
 Template.home.events 'keyup': (e) ->
   if e.which == 13
     enteredText = $(".enterTodo").val()

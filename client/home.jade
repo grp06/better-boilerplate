@@ -7,3 +7,9 @@ template(name='home')
     .col-md-12
       .mainInput
         input.enterTodo(type="text" placeholder="hello")
+  .row
+    .col-md-12
+      .todosBox
+        each returnAllTodos
+          {{enteredText}}
+          br
