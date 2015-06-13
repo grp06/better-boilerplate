@@ -1,13 +1,9 @@
 template(name='home')
-  button Click Me
-  p You've pressed the button {{counter}} times.
-
-  p hello we can 
-  | write on multiple
-  | lines like this
-
-  .box
-    | and make classes like this
-
-  p#hello
-    | hello there
+  .row
+    .col-md-12
+      .homepageHeader
+        | Todo Share
+  .row
+    .col-md-12
+      .mainInput
+        input.enterTodo(type="text" placeholder="hello")
