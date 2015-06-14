@@ -1,4 +1,4 @@
-Todos = new Mongo.Collection('todos')
+Meteor.subscribe 'todos'
 
 Template.home.helpers 
   returnAllTodos: ->

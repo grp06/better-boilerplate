@@ -1,1 +1,2 @@
-#add publications here
+Meteor.publish 'todos', ->
+	Todos.find()
